@@ -1,0 +1,7 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =5
+let g:netrw_dirhist_1='/Users/aib/projects/lizhengwei/ranking_list_calculator/cron.test'
+let g:netrw_dirhist_2='/Users/aib/projects/bigdata/ranking_list_calculator/cron.test'
+let g:netrw_dirhist_3='/Users/aib/projects/bigdata/rank.api.bigdata.pandatv.com/config'
+let g:netrw_dirhist_4='/Users/aib/projects/bigdata/ranking_list_calculator/src'
+let g:netrw_dirhist_5='/Users/aib/Downloads/qbus/java'
