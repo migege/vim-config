@@ -103,6 +103,7 @@ set tm=500
 
 " Add a bit extra margin to the left
 "set foldcolumn=1
+"set foldmethod=indent
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -110,6 +111,11 @@ set tm=500
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Enable syntax highlighting
 syntax enable
+
+set background=dark
+"set background=light
+set t_Co=256
+
 
 let g:go_highlight_functions = 1
 let g:go_highlight_methods = 1
@@ -121,10 +127,17 @@ let g:go_highlight_build_constraints = 1
 let g:go_fmt_command = "goimports"
 
 try
-    colorscheme desert
+"   colorscheme solarized
+"   let g:solarized_termcolors = 256
+"   let g:solarized_termtrans = 1
+"   let g:solarized_contrast = high
+"
+"   colorscheme molokai
+    colorscheme dracula
 catch
 endtry
-"let g:airline_theme = 'solarized'
+
+let g:airline_theme = 'powerlineish'
 let g:airline_left_sep='>'
 let g:airline_left_sep='<'
 let g:airline_detect_modified=1
@@ -133,12 +146,10 @@ let g:airline_detect_crypt=1
 
 let g:molokai_original = 1
 
-set background=dark
-set t_Co=256
-
 "set cursorline
-"highlight CursorLine ctermbg=DarkGray ctermfg=White cterm=NONE
-highlight Search ctermbg=Red ctermfg=White cterm=NONE
+"highlight CursorLine ctermbg=Black ctermfg=White cterm=NONE
+"highlight Search ctermbg=White ctermfg=Black cterm=NONE
+highlight Search ctermbg=DarkBlue ctermfg=LightGray cterm=NONE
 
 " Set extra options when running in GUI mode
 if has("gui_running")
@@ -172,16 +183,16 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#left_sep = ' '
 let g:airline#extensions#tabline#left_alt_sep = '|'
 
+" 1 tab == 4 spaces
+set shiftwidth=4
+set tabstop=4
+set softtabstop=4
+
 " Use spaces instead of tabs
 set expandtab
 
 " Be smart when using tabs ;)
 set smarttab
-
-" 1 tab == 4 spaces
-set shiftwidth=4
-set tabstop=4
-set softtabstop=4
 
 " Linebreak on 500 characters
 set lbr
